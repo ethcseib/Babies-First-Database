@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Classwork_6_database"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="597.2" Width="1153.6">
+    <Grid Margin="0,0,-332.4,-83">
+        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Margin="218,121,0,0" TextChanged="TextBox3_TextChanged"/>
+        <Button x:Name="SeeAssets" Content="See Assets" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="218,221,0,0" Click="SeeAssets_Click_1"/>
+        <TextBox x:Name="TextBox4" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Margin="626,121,0,0" TextChanged="TextBox4_TextChanged"/>
+        <Button x:Name="SeeEmployees" Content="See Employees" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="683,226,0,0" Click="SeeEmployees_Click"/>
+        <TextBox x:Name="TextBox5" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Margin="798,121,0,0" TextChanged="TextBox5_TextChanged"/>
+        <TextBox x:Name="TextBox6" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Margin="966,121,0,0" TextChanged="TextBox6_TextChanged"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Margin="50,121,0,0" TextChanged="TextBox1_TextChanged"/>
+        <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Margin="386,121,0,0" TextChanged="TextBox3_TextChanged"/>
+
     </Grid>
 </Window>
