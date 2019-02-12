@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.OleDb;
 
 namespace Classwork_6_database
 {
@@ -20,9 +21,28 @@ namespace Classwork_6_database
     /// </summary>
     public partial class MainWindow : Window
     {
+        OleDbConnection cn;
+
         public MainWindow()
         {
+            cn = new OleDbConnection("Classwork_database1ConnectionString");
             InitializeComponent();
+        }
+
+        private void SeeAssets_Click(object sender, RoutedEventArgs e)
+        {
+            string query = "select* from Assets";
+            OleDbCommand cmd = new OleDbCommand(query, cn);
+            cn.Open();
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            string data = "";
+
+            while (reader.Read())
+            {
+                data += reader[0].ToString() + "\n";
+            }
+            Text.Text = data;
         }
     }
 }
