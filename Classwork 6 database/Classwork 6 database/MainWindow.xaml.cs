@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*Ethan Seiber
+ * Date: 2/11/19
+ * File: MainWindow.xaml.cs
+ * Description: Connects with a database and prints the contents
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,26 +34,26 @@ namespace Classwork_6_database
             InitializeComponent();
         }
 
-        private void SeeAssets_Click_1(object sender, RoutedEventArgs e)
+        private void SeeAssets_Click_1(object sender, RoutedEventArgs e)//See the assets in TextBoxes1, 2, 3
         {
             string query = "select* from Assets";
             OleDbCommand cmd = new OleDbCommand(query, cn);
-            
+
             cn.Open();
-            
+
             OleDbDataReader reader = cmd.ExecuteReader();
 
             string Asset = "AssetID\n";
             string Desc = "Description\n";
             string EmployeeID = "EmployeeID\n";
 
-            while (reader.Read())
+            while (reader.Read())//gathers asset information
             {
-                Asset += reader[0].ToString() + "\n";
-                Desc += reader[1].ToString() + "\n";
-                EmployeeID += reader[2].ToString() + "\n";
+                Asset += reader[0].ToString() + "\n\n\n";
+                Desc += reader[1].ToString() + "\n\n";
+                EmployeeID += reader[2].ToString() + "\n\n\n";
             }
-            TextBox1.Text = Asset;
+            TextBox1.Text = Asset;//prints asset information
             TextBox2.Text = Desc;
             TextBox3.Text = EmployeeID;
 
@@ -56,7 +61,7 @@ namespace Classwork_6_database
         }
 
 
-        private void SeeEmployees_Click(object sender, RoutedEventArgs e)
+        private void SeeEmployees_Click(object sender, RoutedEventArgs e)//Prints All Employee information
         {
 
             string query = "select* from Employees";
@@ -70,21 +75,21 @@ namespace Classwork_6_database
             string FirstName = "FirstName\n";
             string LastName = "LastName\n";
 
-            while (reader.Read())
+            while (reader.Read())//Gathers the Employee information
             {
-                ID += reader[0].ToString() + "\n";
-                FirstName += reader[1].ToString() + "\n";
-                LastName += reader[2].ToString() + "\n";
+                ID += reader[0].ToString() + "\n\n";
+                FirstName += reader[1].ToString() + "\n\n";
+                LastName += reader[2].ToString() + "\n\n";
             }
 
-            TextBox4.Text = ID;
+            TextBox4.Text = ID;//Prints the Employee information to the textbox
             TextBox5.Text = FirstName;
             TextBox6.Text = LastName;
 
             cn.Close();
         }
 
-        private void TextBox1_TextChanged(object sender, TextChangedEventArgs e)
+        private void TextBox1_TextChanged(object sender, TextChangedEventArgs e)//after this point is just a lot of textbox declaration with no content because it was needed
         {
 
         }

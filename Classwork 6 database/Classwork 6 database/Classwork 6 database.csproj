@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E3050D4-88D7-4279-9D21-8660F54FE85C}</ProjectGuid>
+    <ProjectGuid>{894D3B67-1BDF-45F8-B5FD-EC6D23657337}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Classwork_6_database</RootNamespace>
     <AssemblyName>Classwork 6 database</AssemblyName>
